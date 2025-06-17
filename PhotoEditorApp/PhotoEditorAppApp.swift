@@ -7,11 +7,3 @@
 
 import SwiftUI
 
-@main
-struct PhotoEditorAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
