@@ -1,5 +1,5 @@
 //
-//  PhotoEntry.swift
+//  PhotoEntity.swift
 //  PhotoEditorApp
 //
 //  Created by Kostiantyn Kolosov on 17.06.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct PhotoEntry: Identifiable, Hashable {
+struct PhotoEntity: Identifiable, Hashable {
   let id: UUID = .init()
   let image: UIImage
 

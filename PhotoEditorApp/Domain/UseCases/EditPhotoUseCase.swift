@@ -10,7 +10,7 @@ import CoreImage.CIFilterBuiltins
 import UIKit
 
 protocol EditPhotoUseCase {
-  func execute(photo: PhotoEntry) throws -> PhotoEntry
+  func execute(photo: PhotoEntity) throws -> PhotoEntity
 }
 
 final class EditPhotoUseCaseImpl: EditPhotoUseCase {
@@ -21,11 +21,11 @@ final class EditPhotoUseCaseImpl: EditPhotoUseCase {
     self.photoRepository = photoRepository
   }
 
-  func execute(photo: PhotoEntry) throws -> PhotoEntry {
+  func execute(photo: PhotoEntity) throws -> PhotoEntity {
     guard let filtered = applyMonoFilter(to: photo.image) else {
       throw PhotoError.invalidFormat
     }
-    let entry = PhotoEntry(image: filtered)
+    let entry = PhotoEntity(image: filtered)
     return entry
   }
 

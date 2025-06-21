@@ -2,7 +2,7 @@ import PhotosUI
 import SwiftUI
 
 protocol PhotoEditorViewModel: Observable, AnyObject {
-  var photo: PhotoEntry? { get set }
+  var photo: PhotoEntity? { get set }
   var error: Error? { get set }
   var saveMessage: String? { get set }
   var isLoading: Bool { get set }
@@ -23,7 +23,7 @@ final class PhotoEditorViewModelImpl: PhotoEditorViewModel {
   private let editPhotoUseCase: EditPhotoUseCase
   private let savePhotoUseCase: SavePhotoUseCase
 
-  var photo: PhotoEntry?
+  var photo: PhotoEntity?
   var error: Error?
   var saveMessage: String?
   var isLoading: Bool = false
