@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct PhotoEditorApp: App {
+
   var body: some Scene {
     WindowGroup {
-        PhotoEditorView(model: AppContainer.shared.makePhotoEditorViewModel())
+      PhotoEditorFactory().impl()
     }
   }
 }

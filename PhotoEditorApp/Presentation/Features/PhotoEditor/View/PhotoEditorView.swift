@@ -3,7 +3,7 @@ import SwiftUI
 
 // MARK: - Presentation Layer
 
-struct PhotoEditorView<ViewModel: PhotoEditorViewModelImpl>: View {
+struct PhotoEditorView<ViewModel: PhotoEditorViewModel>: View {
   @Bindable var model: ViewModel
 
   var body: some View {
