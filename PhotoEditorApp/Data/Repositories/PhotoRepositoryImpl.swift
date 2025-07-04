@@ -7,13 +7,10 @@
 
 import UIKit
 
-protocol PhotoRepository {
-  func saveToLibrary(photo: PhotoEntry, completion: @escaping (Result<Void, Error>) -> Void)
-}
 final class PhotoRepositoryImpl: NSObject, PhotoRepository {
   private var completion: ((Result<Void, Error>) -> Void)?
 
-  func saveToLibrary(photo: PhotoEntry, completion: @escaping (Result<Void, Error>) -> Void) {
+  func saveToLibrary(photo: PhotoEntity, completion: @escaping (Result<Void, Error>) -> Void) {
     self.completion = completion
     UIImageWriteToSavedPhotosAlbum(
       photo.image, self,
